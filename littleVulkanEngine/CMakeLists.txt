@@ -10,4 +10,5 @@ INCLUDE_DIRECTORIES("third_party/glfw/src")
 INCLUDE_DIRECTORIES("third_party/glfw/include")
 
 ADD_SUBDIRECTORY(tutorial01)
+ADD_SUBDIRECTORY(tutorial02)
 
