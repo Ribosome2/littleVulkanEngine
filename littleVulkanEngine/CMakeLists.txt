@@ -12,4 +12,6 @@ LINK_DIRECTORIES("third_party/glfw")
 
 ADD_SUBDIRECTORY(tutorial01)
 ADD_SUBDIRECTORY(tutorial02)
+ADD_SUBDIRECTORY(tutorial03&04)
+ADD_SUBDIRECTORY(tutorial05)
 
