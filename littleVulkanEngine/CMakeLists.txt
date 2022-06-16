@@ -3,11 +3,14 @@ PROJECT(SimpleEngine)
 
 FIND_PACKAGE(Vulkan REQUIRED)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 INCLUDE_DIRECTORIES($ENV{VULKAN_SDK}/include)
 
 INCLUDE_DIRECTORIES("third_party/glfw/src")
 
-INCLUDE_DIRECTORIES("third_party/glfw/include" "third_party/glm")
+INCLUDE_DIRECTORIES("third_party/glfw/include" "third_party/glm" "third_party/tiny_obj_loader")
 LINK_DIRECTORIES("third_party/glfw")
 
 
@@ -27,4 +30,5 @@ ADD_SUBDIRECTORY(tutorial13)
 ADD_SUBDIRECTORY(tutorial14)
 ADD_SUBDIRECTORY(tutorial15)
 ADD_SUBDIRECTORY(tutorial16)
+ADD_SUBDIRECTORY(tutorial17)
 
