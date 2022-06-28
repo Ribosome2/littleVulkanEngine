@@ -6,7 +6,9 @@ FIND_PACKAGE(Vulkan REQUIRED)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-INCLUDE_DIRECTORIES($ENV{VULKAN_SDK}/include)
+INCLUDE_DIRECTORIES($ENV{VULKAN_SDK}/include
+        "../src"
+        "../littleVulkanEngine/third_party/glm")
 
 INCLUDE_DIRECTORIES("../littleVulkanEngine/third_party/glfw/src")
 
@@ -32,7 +34,7 @@ ADD_EXECUTABLE(${EXE_NAME}
         lve_device.cpp
         lve_frame_info.hpp
         lve_game_object.hpp
-        lve_game_object.hpp
+        lve_game_object.cpp
         lve_model.hpp
         lve_model.cpp
         lve_pipeline.hpp
