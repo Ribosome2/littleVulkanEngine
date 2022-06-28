@@ -47,7 +47,12 @@ ADD_EXECUTABLE(${EXE_NAME}
 
         lve_window.cpp
         lve_window.hpp
+        systems/point_light_system.hpp
+        systems/point_light_system.cpp
+        systems/simple_render_system.hpp
+        systems/simple_render_system.cpp
+
         )
 
-TARGET_LINK_LIBRARIES(${EXE_NAME} glfw)
+TARGET_LINK_LIBRARIES(${EXE_NAME} glfw Vulkan::Vulkan)
 
