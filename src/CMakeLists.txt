@@ -58,3 +58,13 @@ ADD_EXECUTABLE(${EXE_NAME}
 
 TARGET_LINK_LIBRARIES(${EXE_NAME} glfw Vulkan::Vulkan)
 
+
+SET(SHADER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../shaders)
+MESSAGE("shaders directory: ${SHADER_DIR}")
+ADD_CUSTOM_COMMAND(TARGET ${EXE_NAME} POST_BUILD
+        COMMAND glslc ${SHADER_DIR}/simple_shader.vert -o ${SHADER_DIR}/simple_shader.vert.spv
+        COMMAND glslc ${SHADER_DIR}/simple_shader.frag -o ${SHADER_DIR}/simple_shader.frag.spv
+        COMMAND glslc ${SHADER_DIR}/point_light.vert -o ${SHADER_DIR}/point_light.vert.spv
+        COMMAND glslc ${SHADER_DIR}/point_light.frag -o ${SHADER_DIR}/point_light.frag.spv
+        )
+
